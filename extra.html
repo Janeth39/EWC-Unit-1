@@ -16,3 +16,39 @@
       <a href="https://www.youtube.com">Youtube</a>
 
     </body>
+    
+    <br>
+
+<script>
+  var i = 0;
+  var images = [];
+  var time = 3000;
+
+  // images list
+  images[0] = 'sunset.jpg';
+  images[1] = 'sunsets2.jpeg';
+  images[2] = 'sunsets3.jpeg';
+  images[3] = 'sunsets4.jpg';
+
+  //Change images
+  function changeImg()
+  {
+    document.slide.src = images[i];
+
+    //check If Index is Under Max
+    if(i < images.length -1)
+    {
+      //add 1 to index
+      i++;
+    }
+    else
+    {
+      i = 0;
+    } 
+    setTime("changeImg()", time);
+  }
+  window.onload = changeImg;
+  </script>
+
+  <img name = "slide" width="400" height="200"/>
+
